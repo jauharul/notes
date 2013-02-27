@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>FAQ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- CSS -->
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      html, body { height: 100%; }
+      #wrap {
+        min-height: 100%;
+        height: auto !important;
+        height: 100%;
+        margin: 0 auto -40px;
+      }
+      #push, #footer { height: 40px; }
+      #footer { background-color: #f5f5f5; }
+      .container { width: auto; max-width: 680px; }
+      .credit { margin: 10px 0; }
+      .note { padding-left: 20px; }
+      /* Customizing bootstrap default value */
+      .lead { margin-bottom: 0px; }
+      a.accordion-toggle:hover { text-decoration: none; }
+      .accordion-inner { padding: 0px 15px; }
+      .badge { vertical-align: middle; }
+    </style>
+    <link href="static/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="static/js/google-code-prettify/sunburst.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- Begin page content -->
+      <div class="container">
+        <div class="page-header">
+          <h2>Frequently Asked Question</h2>
+        </div>
+
+        <!-- Begin Accordion -->
+        <div class="accordion" id="accordion2">
+          <!-- Accordion Item 1 -->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+              <p class="lead">
+                  <span class="badge badge-info">virtualenv</span> 
+                  Bagaimana cara membuat <em>virtual environment</em> yang baru?
+              </p>
+                </a>
+            </div>
+            <div class="accordion-body collapse" id="collapseOne">
+              <div class="accordion-inner">
+<pre class="prettyprint">
+mkvirtualenv &lt;name&gt; --python=&lt;python-installation-directory&gt;
+<em>Contoh:</em>
+mkvirtualenv flask --python=/home/jauharul/.local/bin/python2.7
+</pre>
+                <p class="note">
+                  <strong>Note:</strong> tambahan opsi <code>--python</code> 
+                  berarti menggunakan instalasi selain <em>default</em>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 2 -->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+              <p class="lead">
+                  <span class="badge badge-info">python</span> 
+                  Bagaimana menginstall <em>python-package</em> dari <em>local directory</em>?
+              </p>
+                </a>
+            </div>
+            <div class="accordion-body collapse" id="collapseTwo">
+              <div class="accordion-inner">
+<pre class="prettyprint">
+pip install --no-index &lt;package-installation-file&gt;
+<em>Contoh:</em>
+pip install --no-index Flask-0.9.tar.gz
+</pre>
+                <p class="note">
+                  <strong>Note:</strong> <code>--no-index</code> hanya memeriksa local directory. 
+                  Jika tidak ada, tidak mendownload dari <a href="http://pypi.python.org"><code>pypi</code></a>.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion Item 3 -->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+              <p class="lead">
+                  <span class="badge badge-info">bash</span> 
+                  Bagaimana membuat <em>symbolic link</em>?
+              </p>
+                </a>
+            </div>
+            <div class="accordion-body collapse" id="collapseThree">
+              <div class="accordion-inner">
+<pre class="prettyprint">
+ln -s {$target-filename} {$symbolic-filename}
+<em>Contoh:</em>
+ln -s /home/jauharul/src/djangobook/_build/html/ /home/jauharul/public_html/djangobook
+</pre>
+                <p class="note">
+                  <strong>Note:</strong> Dengan <em>symbolic link</em>, 
+                  akses dokumentasi menjadi mudah meski tidak di <code>public_html</code>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of Accordion -->
+
+      </div>
+      <div id="push"></div>
+    </div>
+    <div id="footer">
+      <div class="container">
+        <p class="muted credit">Courtesy of <a href="http://jauharul.com">M Jauharul Fuady</a>.</p>
+      </div>
+    </div>
+
+    <!-- Le javascript -->
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/google-code-prettify/prettify.js"></script>
+    <script src="static/js/bootstrap-collapse.js"></script>
+    <script type="text/javascript">
+      !function ($) {
+        $(function(){
+          window.prettyPrint && prettyPrint()
+        })
+      }(window.jQuery);
+    </script>
+  </body>
+</html>
