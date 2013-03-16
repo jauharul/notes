@@ -114,6 +114,31 @@ ln -s /home/jauharul/src/djangobook/_build/html/ /home/jauharul/public_html/djan
               </div>
             </div>
           </div>
+
+          <!-- Accordion Item 4 -->
+          <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+              <p class="lead">
+                  <span class="badge badge-info">heroku</span> 
+                  Bagaimana me-<em>rename</em> app?
+              </p>
+                </a>
+            </div>
+            <div class="accordion-body collapse" id="collapseFour">
+              <div class="accordion-inner">
+<pre class="prettyprint">
+heroku apps:rename NEWNAME
+<em>Contoh:</em>
+heroku apps:rename quiz-ai-pendtium
+</pre>
+                <p class="note">
+                  <strong>Note:</strong> Cara lain adalah dengan mengubah melalui web interface. 
+                  Jika berhasil, update heroku remote URL dengan <code>git remote set-url heroku &lt;newurl&gt;</code>.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
         <!-- End of Accordion -->
 
